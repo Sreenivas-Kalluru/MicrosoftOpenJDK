@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+a, a:link, a:visited { color: #2b59a9; text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+
+p {
+    margin: 0;
+}
+.text-center { 
+    text-align: center; 
+}
+.bold { font-weight: 500; }
+
+.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header { background: #ffffff; min-height: 40px; border-bottom: 1px solid #a6a6a6; }
+header:after { clear: both; content: '.'; display: block; visibility: hidden; height: 0; }
+header .header-content { position: relative; z-index: 2; margin: 0 auto; padding:0 5%; max-width: 1600px; }
+header form { display: inline; }
+
+header a#logo, .logo { width: 137px; float: left; padding: 16px 6px 14px 0; height: 100%; margin-top: 1px; outline-offset: 0; }
+header a#logo svg { margin-top: -1px; width: 108px; height: 23px; }
+nav { background: transparent; }
+nav ul { list-style: none; padding: 0; margin: 0; float: left; }
+nav ul li { margin: 0; float: left; padding: 0; }
+nav ul li.last-child { margin: 0; }
+nav.nav-main > div { margin: 0 auto; padding:0 10px; max-width:1180px; }
+nav.nav-main > div > a { color: #262626; float: left; line-height: 28px; margin-right: 15px; margin-left: 10px; padding: 16px 6px 16px 10px; width: auto; outline-offset: -1px; margin-top: 1px; }
+nav.nav-main > div > a.c-logo:before { content: "|"; display: block; font-size: 28px; font-weight: normal; margin-left: -48px; padding-left: 18px; position: absolute; color: #262626; top: 9px; }
+nav.nav-main > div > a span { font-size: 18px; display:block; margin-top: -3px; font-weight: 600; }
+nav.nav-main > div > a:hover { text-decoration: none; }
+nav.nav-main > div > a.icon { float:right; margin-right:15px; display: none; }
+nav.nav-main li a { font-size: 13px; margin-top: 1px; color: #262626; display: inline-block; position: relative; box-sizing: border-box; line-height: 1; padding: 20px 8px 10px; text-decoration: none; border-bottom: 1px solid transparent; margin-top: 2px; }
+nav.nav-main li a:before { bottom: 5px; width: calc(100% - 16px); display: none; background: #262626; content: ""; height: 2px; position: absolute;  }
+nav.nav-main li a:hover:before, nav.nav-main li a:focus:before { display: block }
+nav.nav-main li a.active { background-color: transparent; }
+nav.nav-main li a.selected { background-color: transparent; text-decoration: none; color: #262626; }
+nav.nav-main li a.selected.active { background-color: transparent; }
+
+footer { background-color: #e6e7e8; margin-top: 30px; }
+.footer { background: #f2f2f2; margin: 0 auto; max-width: calc(1600px + 10%); padding: 30px 5% 16px; }
+.footer:after { clear: both; content: '.'; display: block; visibility: hidden; height: 0; }
+.footer ul.last { margin: 0; }
+.footer li { margin-bottom: 3px; padding: 0; }
+
+.footer a { text-decoration: none; font-size: 12px; }
+.footer a:hover, .footer a:focus { text-decoration: underline; }
+
+.footer-menu { margin: 0; list-style: none; float: left; padding: 0; }
+.footer-menu:after { clear: both; content: '.'; display: block; visibility: hidden; height: 0; }
+.footer-menu.last { float: right; }
+.footer-menu .separator { padding: 0 7px; color: #231f20; }
+.footer-menu h2 { font-size: 12px; color: #231f20; font-weight: normal; margin: 0 0 10px 0; font-family: 'Segoe UI',Tahoma,Arial,Helvetica,sans-serif; background: none; }
+.footer-menu li.block { float: none; margin-bottom: 0; }
+.footer-menu li { float: left; color: #231f20; }
+.footer-menu li:after { clear: both; content: '.'; display: block; visibility: hidden; height: 0; }
+.footer-menu a { color: #231f20; }
+.logo-microsoft { display: block; width: 18px; height: 18px; margin-bottom: -7px; position: relative; bottom: 2px; padding-bottom: 1px; }
+.logo-microsoft:focus { outline-offset: 1px; }
+.footer-menu.last h2 { float: right; }
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1380px;
+}
+
+
+/*******Responsive CSS******/
+
