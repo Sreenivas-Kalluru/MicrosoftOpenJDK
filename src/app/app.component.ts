@@ -11,10 +11,6 @@ import xml2js from 'xml2js';
 
 export class AppComponent {
   title = 'OpenJDK-Demo';
-  /*css: SafeStyle;
-  header: SafeHtml;
-  footer: SafeHtml;
-  script: SafeScript;*/
   public css: SafeStyle;
   public header: SafeHtml;
   public footer: SafeHtml;
@@ -26,7 +22,7 @@ export class AppComponent {
       responseType: 'text'
     }).subscribe(response => {
       //debugger;
-      console.log(response);
+      //console.log(response);
       this.parseXML(response)
         .then((data) => {
           var res: any = data;
@@ -84,53 +80,4 @@ export class AppComponent {
       }
     })
   }
-  /*constructor(private http: HttpClient, private sanitizer: DomSanitizer, @Inject(DOCUMENT) private document: Document) {
-    //https://uhf.microsoft.com/en-US/shell/xml/MSOpenjdk?headerId=MSOpenjdkHeader&footerid=MSOpenjdkFooter&CookieComplianceEnabled=true
-    //assets/sample.json
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/xml', //<- To SEND XML
-        'Accept': 'application/xml',       //<- To ask for XML
-        'Response-Type': 'text'             //<- b/c Angular understands text
-      })
-    };
-    this.http.get('http://localhost:7071/api/getHeaderFooterInfo').subscribe(response => {
-      debugger;
-      console.log(response);
-      var res: any = response;
-      this.css = res.CssIncludes;
-      this.header = res.HeaderHtml;
-      this.script = res.JavaScriptIncludes;
-      this.footer = res.FooterHtml;
-      this.loadStyle(this.css);
-      this.loadScripts(this.script);
-
-    })
-
-
-  }
-
-  loadStyle(styleName) {
-    if (styleName) {
-      const head = this.document.getElementsByTagName('head')[0];
-      var list = styleName.split("/>");
-      list.map(e => {
-        if (e.trim()) {
-          var element = e + '/>';
-          head.insertAdjacentHTML('afterbegin', element);
-        }
-      })
-    }
-  }
-
-  loadScripts(styleName) {
-    const head = this.document.getElementsByTagName('body')[0];
-    var list = styleName.split("</script>");
-    list.map(e => {
-      if (e.trim()) {
-        var element = e + '</script>';
-        head.insertAdjacentHTML('afterend', element);
-      }
-    })
-  }*/
 }
