@@ -21,23 +21,21 @@ export class AppComponent {
     this.http.get('https://uhf.microsoft.com/en-US/shell/xml/MSOpenjdk?headerId=MSOpenjdkHeader&footerid=MSOpenjdkFooter&CookieComplianceEnabled=true', {
       responseType: 'text'
     }).subscribe(response => {
-      //debugger;
-      //console.log(response);
       this.parseXML(response)
         .then((data) => {
           var res: any = data;
           this.css = res.cssIncludes;
-          this.header = res.headerHtml;
+          this.header =this.sanitizer.bypassSecurityTrustHtml(res.headerHtml);
           this.script = res.javascriptIncludes;
-          this.footer = res.footerHtml;
+          this.footer =this.sanitizer.bypassSecurityTrustHtml(res.footerHtml);
           this.loadStyle(this.css);
           this.loadScripts(this.script);
+         // console.log(this.header);
         });
     })
   }
 
   parseXML(data) {
-    //debugger;
     return new Promise(resolve => {
       let arr = [];
       let parser = new xml2js.Parser(
